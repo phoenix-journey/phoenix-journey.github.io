@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://phoenix-journey.github.io/posts/hi-nutek/</loc>
+    <loc>https://phoenix-journey.github.io/posts/hi-nutek/</loc>
     <lastmod>2022-08-28T11:01:29+02:00</lastmod>
   </url><url>
-    <loc>http://phoenix-journey.github.io/</loc>
+    <loc>https://phoenix-journey.github.io/</loc>
     <lastmod>2022-08-28T11:01:29+02:00</lastmod>
   </url><url>
-    <loc>http://phoenix-journey.github.io/posts/</loc>
+    <loc>https://phoenix-journey.github.io/posts/</loc>
     <lastmod>2022-08-28T11:01:29+02:00</lastmod>
   </url><url>
-    <loc>http://phoenix-journey.github.io/categories/</loc>
+    <loc>https://phoenix-journey.github.io/categories/</loc>
   </url><url>
-    <loc>http://phoenix-journey.github.io/tags/</loc>
+    <loc>https://phoenix-journey.github.io/tags/</loc>
   </url>
 </urlset>

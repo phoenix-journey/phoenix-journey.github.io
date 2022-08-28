@@ -2,9 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain.</title>
-    <link>http://phoenix-journey.github.io/tags/</link>
+    <link>https://phoenix-journey.github.io/tags/</link>
     <description>Recent content in Tags on Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain.</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="http://phoenix-journey.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://phoenix-journey.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
