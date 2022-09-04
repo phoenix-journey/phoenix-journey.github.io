@@ -1,7 +1,7 @@
 ---
 title: "Python & Neovim"
 date: 2022-09-02T19:37:24+02:00
-draft: true
+draft: false
 toc: true
 ---
 
