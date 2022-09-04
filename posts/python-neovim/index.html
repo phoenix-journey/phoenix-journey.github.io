@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Python &amp; Neovim | Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Python &amp; Neovim What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
+neosb/nutek-core:0.4.0 from Docker Hub Nutek from crates.io or Github You could follow on with Python3, pip, venv and Neovim What you will learn? I want to show you few Python use cases and how to write code in Neovim.">
+    <meta name="generator" content="Hugo 0.101.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/syntax.css">
+  
+
+    
+    
+    
+      
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+
+    
+
+    
+    
+    <meta property="og:title" content="Python &amp; Neovim" />
+<meta property="og:description" content="Python &amp; Neovim What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
+neosb/nutek-core:0.4.0 from Docker Hub Nutek from crates.io or Github You could follow on with Python3, pip, venv and Neovim What you will learn? I want to show you few Python use cases and how to write code in Neovim." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nutek.marketplaceinspace.com/posts/python-neovim/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-02T19:37:24+02:00" />
+<meta property="article:modified_time" content="2022-09-02T19:37:24+02:00" />
+
+<meta itemprop="name" content="Python &amp; Neovim">
+<meta itemprop="description" content="Python &amp; Neovim What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
+neosb/nutek-core:0.4.0 from Docker Hub Nutek from crates.io or Github You could follow on with Python3, pip, venv and Neovim What you will learn? I want to show you few Python use cases and how to write code in Neovim."><meta itemprop="datePublished" content="2022-09-02T19:37:24+02:00" />
+<meta itemprop="dateModified" content="2022-09-02T19:37:24+02:00" />
+<meta itemprop="wordCount" content="2231">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Python &amp; Neovim"/>
+<meta name="twitter:description" content="Python &amp; Neovim What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
+neosb/nutek-core:0.4.0 from Docker Hub Nutek from crates.io or Github You could follow on with Python3, pip, venv and Neovim What you will learn? I want to show you few Python use cases and how to write code in Neovim."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        <img src="/img/logo.png" class="w100 mw5-ns" alt="Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain." />
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home page">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Python &amp; Neovim</h1>
+      
+      <p class="tracked">
+        By <strong>Szymon Błaszczyński</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-09-02T19:37:24+02:00">September 2, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="python--neovim">Python &amp; Neovim</h1>
+<h2 id="what-do-you-need-to-have">What do you need to have?</h2>
+<p><em>Hej</em>, today we begin learning with <strong>Nutek</strong> to be able to use it
+how I see it fit. First be sure you have one of the following:</p>
+<ul>
+<li><code>neosb/nutek-core:0.4.0</code> from <a href="https://hub.docker.com/r/neosb/nutek-core">Docker Hub</a></li>
+<li><code>Nutek</code> from <a href="https://crates.io/crates/nutek">crates.io</a> or <a href="https://github.com/phoenix-journey/nutek/releases">Github</a></li>
+<li>You could follow on with <code>Python3</code>, <code>pip</code>, <code>venv</code> and <code>Neovim</code></li>
+</ul>
+<h2 id="what-you-will-learn">What you will learn?</h2>
+<p>I want to show you few <code>Python</code> use cases and how to write code in
+<code>Neovim</code>. We will use this in future lessons and hacking activities
+that will surely come to us as we go.</p>
+<p>I&rsquo;m not the only source of truth you should rely on, so try to
+<a href="https://crates.io/crates/bing-search">bing-search</a> (which is the part
+of Nutek) or use <a href="https://www.google.com">Google</a> to look-up
+interesting parts and to broaden your knowledge.</p>
+<h2 id="where-to-look-for-answers">Where to look for answers?</h2>
+<p>I give you some links that might help you in the beginning.</p>
+<p><code>Neovim</code> is compatible version of <code>Vim</code> which is <code>Vi</code> improved,
+it&rsquo;s one of the basic text editor found on most of the UNIX-like
+operating systems, thus knowing how to use it is likely to payoff
+int the future :)</p>
+<ul>
+<li><a href="https://neovim.io/doc/">Neovim documentation</a></li>
+<li><a href="https://devhints.io/vim">Vim cheatsheet</a></li>
+<li><a href="https://vim.rtorr.com/">Vim cheatsheet #2</a></li>
+<li><a href="https://danielmiessler.com/study/vim/">Vim tutorial</a></li>
+<li>open <code>nvim</code> in terminal and type <code>:Tutor</code> to open one of the first
+interactive tutorials out there that will teach you the basics of
+Neovim.</li>
+<li><a href="https://github.com/junegunn/vim-plug">Vim Plug</a> minimalist plugin manager</li>
+<li><a href="https://vimawesome.com/">Awesome Vim plugins</a></li>
+</ul>
+<p><code>Python</code> one of the most used programming languages, also one of
+the easiest to learn. So without bothering you with developers
+jargon&hellip;</p>
+<ul>
+<li><a href="https://docs.python.org/3/">Documentation</a></li>
+<li><a href="https://docs.python.org/3/tutorial/index.html">Tutorial</a></li>
+<li><a href="https://pypi.org/">PyPI - pip installable packages</a></li>
+</ul>
+<h2 id="3-2-1-">3.. 2.. 1.. 🚀</h2>
+<p>First of all, to start <code>Neovim</code> type <code>nvim</code> in your terminal, or
+if you are ready to edit a text file, type
+<code>nvim my_first_python_script.py</code>. <code>.py</code> extension tells <code>nvim</code>
+that it&rsquo;s a Python file and if you use <code>Nutek</code> or <code>nutek-core</code>, after
+first start you will be given a chance to install <code>coc-jedi</code> which
+helps a lot with <code>Python</code> files. Keep pressing <code>&lt;Enter&gt;</code> untill it&rsquo;s
+done. I have preinstalled there, for you too,
+<a href="https://github.com/features/copilot">Github Copilot</a>, so just.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">Copilot</span> <span class="nx">setup</span><span class="err">
+</span></span></span></code></pre></div><p>inside <code>Neovim</code>, confirm your credentials on <code>Github</code>, and have a
+helping hand ready to assist you with AI generated snippets of code.</p>
+<p>Now. To make the first script a little bit challenging, let&rsquo;s use the
+<code>my_first_python_script.py</code> <code>nvim</code> window and write as follows.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">tabnew</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">terminal</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">i</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">python3</span> <span class="p">-</span><span class="nx">c</span> <span class="s2">&#34;print(&#39;Hej piękna!&#39;)&#34;</span><span class="p">&lt;</span><span class="nx">Enter</span><span class="p">&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>In context of Vi, Vim and Neovim <code>&lt;i&gt;</code> means pressing the <code>i</code> keyboard
+key. There is a lot about text in operating systems, especially
+<code>UNIX</code>-es, where every part of the operating system is a text file and
+<code>Windows</code> sometimes even borrows the thinking, e.g. <code>/etc/hosts/</code> file.
+To the <code>UNIX</code> system family belongs <code>Linux</code> flavours like <code>Debian</code>, <code>Ubuntu</code>, <code>Mint</code>, <code>Arch</code>, <code>Fedora</code>, <code>openSUSE</code>,
+<code>Red Hat Enterprise Linux</code>; <code>macOS</code>, <code>BSD</code> based systems, <code>freeBSD</code>,
+<code>openBSD</code>. For now we won&rsquo;t be learning how to cope with OS, right now
+we want to write something, then we might know how to do something with
+operating system in terminal and in scripts.</p>
+<p>Back on track. You should see now a response from your terminal saying
+to you <code>Hello beauty</code> in <em>Polish</em>. We used <code>python3</code> and a switch <code>-c</code>
+which tells Python to run the code in between quotes. This is called
+an <code>inline</code> script. Now please press:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span>\<span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">n</span><span class="p">&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>It will exit terminal mode and let you operate Neovim normally. It&rsquo;s <code>Ctrl+backslash</code> and <code>Ctrl+n</code>.</p>
+<p>Right now I want you to get to previos tab.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">tabprevious</span><span class="err">
+</span></span></span></code></pre></div><p>You might also autocomplete the statement with a <code>&lt;tab&gt;</code>, or use mouse
+to switch tabs, if have one, but mouse support depends on your
+configurations, and we want to stay focused, so using only keyboard
+might really help you stay as creative as it can be. Now type the
+comment after <code>#</code> sing and if you use Github Copilot, when you press
+<code>&lt;Enter&gt;</code> and wait a second or two, you should get a proposition to
+autocomplete the print statement. Agree with <code>&lt;tab&gt;</code>, dismiss with
+<code>&lt;ctrl-]&gt;</code>, and search for other suggestion with <code>&lt;alt-]&gt;</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># print hacking rules!&lt;Enter&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hacking Rules!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>You have your first script in text file. So save it. First get out of
+insert mode with <code>&lt;Esc&gt;</code> to get to normal mode, then please type.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">write</span><span class="err">
+</span></span></span></code></pre></div><p>I want to run it in a window, which will be visible in this tab, to do
+it follow on with this commands which will close all the other tabs,
+split window horizontally, switch to other window, open terminal,
+run your script and exit Neovim.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">tabonly</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">w</span><span class="p">+</span><span class="nx">s</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">w</span><span class="p">+</span><span class="nx">j</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">terminal</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">i</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nx">python3</span> <span class="nx">my_first_python_script</span>.<span class="nx">py</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">Enter</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span>\<span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">C</span><span class="p">-</span><span class="nx">n</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">q</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">wqa</span><span class="err">
+</span></span></span></code></pre></div><p>You should know now what is the coolest computer activity 🥷.</p>
+<h2 id="what-we-learned-so-far">What we learned so far?</h2>
+<h3 id="neovim">Neovim</h3>
+<ul>
+<li>how to open a text file (<code>nvim filename</code>)</li>
+<li>how to create new tab (<code>:tabnew</code>)</li>
+<li>how to open the terminal (<code>:terminal</code>), get into insert mode (<code>&lt;i&gt;</code>),
+execute inline Python script (<code>-c &quot;python code here&quot;</code>) and exit the
+terminal insert mode (<code>&lt;C-\&gt;&lt;C-n&gt;</code>)</li>
+<li>how to write text (<code>&lt;i&gt;</code>), exit from insert mode (<code>&lt;Esc&gt;</code>) and write
+changes to file (<code>:write</code>)</li>
+<li>close all the other tabs (<code>:tabonly</code>)</li>
+<li>split window horizontally (<code>&lt;C-w+s&gt;</code>) or vertically (<code>&lt;C-w+v&gt;</code>) and
+go to other windows (<code>&lt;C-w+h/j/k/l&gt;</code>) - where <code>h</code> is left, <code>j</code> is down,
+<code>k</code> is up, and <code>l</code> is left and it works with moving around the text in
+normal and visual mode</li>
+<li>close tab, window, or just exit Neovim (<code>:q</code>)</li>
+</ul>
+<h3 id="python">Python</h3>
+<ul>
+<li>how comment looks like (<code># text that is not a code after pound sign</code>)</li>
+<li>how to output text to terminal (<code>print(&quot;this will be the output&quot;</code>)</li>
+</ul>
+<h3 id="copilot-">Copilot 👩🏻‍💻</h3>
+<ul>
+<li>he know what do you mean if you provide enough clues, like a comment
+imported modules, docstring, class name, variables, method or any
+other part of meta that is an input for an AI generated &ldquo;guess&rdquo;</li>
+<li>accept suggestion with <code>&lt;tab&gt;</code></li>
+<li>ask for next suggestion with <code>&lt;alt-]&gt;</code></li>
+<li>dismiss suggestion with <code>&lt;ctrl-]&gt;</code></li>
+</ul>
+<h2 id="flying-higher">Flying higher</h2>
+<p>Open new file.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nvim learning_to_fly.py
+</span></span></code></pre></div><p>And write a comment</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># loop that prints number from 16 to 0.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># When number is divisible by 4 display 💣.</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># After loop finish print 💥</span>
+</span></span></code></pre></div><p>Press <code>&lt;Enter&gt;</code>, write <code>f</code>, wait for suggestion, press <code>tab</code> to
+accept, <code>&lt;Enter&gt;</code> once more, <code>&lt;tab&gt;</code> to accept, <code>&lt;Enter&gt;</code> and <code>&lt;tab&gt;</code>
+again. You should have now fully functional script that does
+exactly what it&rsquo;s asked to do. You should have to have Copilot
+setup to be able to do this. Exit insert mode with <code>&lt;Esc&gt;</code> and
+write the file with <code>:write</code>. If you&rsquo;re using <code>Nutek</code>, open
+new bash sessions with <code>nutek</code>, or if you&rsquo;re using only Docker,
+run <code>docker exec -it name-of-your-container bash</code>. I mean, that
+you need other terminal window where you can access the file
+we&rsquo;re working on right now.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">python3 learning_to_fly.py
+</span></span></code></pre></div><h2 id="what-you-learned-from-this-script">What you learned from this script?</h2>
+<h3 id="for-loop">For loop</h3>
+<p>In one form of it, for loop runs for the exectly specified times
+code which is after the colon sign. Next lines are indented, and will be exucuted. You can ask to skip one iteration with <code>continue</code>, exit
+loop with <code>break</code> wich will resume code flow of unindented lines. It
+also saves a variable <code>i</code> which is the current value of the loop.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s2">&#34;don&#39;t go to school, become ninja!&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="s2">&#34;!&#34;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;🥷&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>As you can see, the value of variable can be in many forms too.</p>
+<h3 id="if-elif-and-else-statement">If, elif and else statement</h3>
+<p>Check if condition is true. Uses boolean logic to check if code after
+colon can be run. It can be <code>True</code> or <code>False</code>. If the condition doesn&rsquo;t
+stands, goes to next <code>elif</code> check, or straight to <code>else</code>. Both are
+optional, but there can be many <code>elif</code> checks, but one <code>else</code>
+statement.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">True</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="ow">not</span> <span class="kc">True</span> <span class="o">==</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="kc">False</span> <span class="o">==</span> <span class="p">(</span><span class="ow">not</span> <span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will run because it does not check for condition \</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># only if it is the last checked statement \</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># if one of the if, or elif will run, after the end of \</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># indentation the program flow will resume after the whole \</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># if check</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;This is my last resort&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>There are also other methods to use <code>if</code> statements. With <code>and</code> clause
+or <code>or</code> clause. Let me show you.</p>
+<h3 id="and">And</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span><span class="line"><span class="cl"><span class="k">elif</span> <span class="kc">True</span> <span class="ow">and</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;We&#39;ve got a winner!&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><h3 id="or">Or</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will run</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Hmmm... Why we do this?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">True</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this is another check that will run</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Simply the best&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="kc">False</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># this will never run</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span></code></pre></div><p>To say it&rsquo;s kind of <em>magic</em> is not enough. <code>and</code> check is <code>True</code> only
+if all of the parts of equation are <code>True</code>, but <code>or</code> clause let you
+pass if check when only one part is <code>True</code>. You can help yourself
+with parentheses (<code>True and (False or True)</code>).</p>
+<h3 id="range-function">Range function</h3>
+<p>Functions are parts of code that can be run many times saving you
+typing, so you dont write <code>Hello world</code> and <code>Hello Agnes</code> two times
+but instead you define a function and then substitue arguments
+in your source code as variables that help you save time. It&rsquo;s like
+cooking. You could add two spoons of sugar, but one spoon of flour.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">hello</span><span class="p">(</span><span class="n">who</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">    friendly greeting
+</span></span></span><span class="line"><span class="cl"><span class="s2">    arguments:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    who (str): who to greet
+</span></span></span><span class="line"><span class="cl"><span class="s2">    returns:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    greeting (str): friendly greeting
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">greeting</span> <span class="o">=</span> <span class="s2">&#34;Hello &#34;</span> <span class="o">+</span> <span class="n">who</span> <span class="o">+</span> <span class="s2">&#34;! How are you?&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">greeting</span>
+</span></span><span class="line"><span class="cl"><span class="n">hello</span><span class="p">(</span><span class="s2">&#34;Agnes&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">hello</span><span class="p">(</span><span class="s2">&#34;Asia&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><p>You learned that <code>range</code> function takes 3 arguments, with optional
+step and is invoked using parentheses, <code>range(0, 16)</code>. Check that with
+hovering over the name of method (aka function) and pressing <code>&lt;K&gt;</code>.
+You can see that when hovering over your <code>hello</code> function and again
+pressing <code>&lt;K&gt;</code>, you can read what is called <strong>dockstring</strong>, think
+about it as helping me understand what do you wanted from me, or how
+it should run exactly. Then use Copilot.</p>
+<p>To invoke hello function, use <code>hello(&quot;world&quot;)</code></p>
+<h3 id="list">List</h3>
+<p><code>range(0, 4)</code> is the same as a list of four items, starting with 0 -
+<code>[0, 1, 2, 3]</code> to access/select an item in a list you use brackets
+<code>[x]</code>. So the first element is <code>[0]</code> and last is <code>[-1]</code> or in our
+case <code>[3]</code>.</p>
+<h3 id="variable">Variable</h3>
+<p>We have also asigned a number to variable, and a character to variable.
+Variable is a placeholder for your values, that let&rsquo;s you use stored
+value in other parts of your program. Variables can be <code>numbers</code>,
+<code>strings</code>, <code>results</code> of your calculations, <code>methods</code>, <code>classes</code>,
+<code>lists</code>, <code>dictionaries</code> aka <code>hashmaps</code>, <code>tuples</code> - simply put,
+<code>objects</code> and <code>basic data types</code>. Check for <code>type</code> of your data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">data_type</span> <span class="o">=</span> <span class="nb">type</span><span class="p">(</span><span class="s2">&#34;this is str class&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">data_type</span><span class="p">)</span>
+</span></span></code></pre></div><p>You should know that you will be using this a lot if you want to
+make programs and scripts.</p>
+<h2 id="get-request">Get request</h2>
+<p>First of all, be sure that you have <code>pip</code> and <code>venv</code> installed.
+Now we will make a virtual environment for the next script to run.
+Venv is used to <em>package</em> the program so it can be easily portable
+and decoupled from other Python scripts. You might want to have
+one package installed, or ten, but you don&rsquo;t need them in all of your
+scripts, so you make a <code>virtual environment</code> with <code>venv</code> and safely
+install what you need now and safely remove later.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkdir my_first_get_request
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> my_first_get_request
+</span></span><span class="line"><span class="cl">python3 -m venv get_request
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> get_request/bin/activate
+</span></span><span class="line"><span class="cl">python3 -m pip install requests
+</span></span></code></pre></div><p>First you created a directory called <code>my_first_get_request</code>, then
+you moved the current working directory to it, then created
+virtual environment called <code>get_request</code> and activated it, then
+installed requests package only for this environment.</p>
+<p>Exit from previous Neovim session if you haven&rsquo;t already, and be sure
+to first activate newly created Python environment and again run
+<code>nvim my_get_request.py</code></p>
+<p>First of all we start with a bad request, which will give us some
+intuition how the http protocol works.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Make a bad get request to httpbin.org then show the error message \</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># and print the headers.</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://httpbin.org/status/404&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">)</span>
+</span></span></code></pre></div><p>Then try again with another get request, that will send back some data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Make a get request to httpbin.org/get with some parameters.</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://httpbin.org/get&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">        <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Szymon&#34;</span><span class="p">,</span> <span class="s2">&#34;age&#34;</span><span class="p">:</span> <span class="mi">34</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">reason</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the query string from the url.</span>
+</span></span><span class="line"><span class="cl"><span class="n">query_string</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">query_string</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the json data from the response.</span>
+</span></span><span class="line"><span class="cl"><span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Pretty print json data.</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">sort_keys</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</span></span></code></pre></div><p>Here we see a classic example of getting data from an API. We provide
+parameters, <code>name</code> and <code>age</code>, this would be likely a query to database.
+In an <code>origin</code> header key, you can see value of your IP address,
+you should know that it&rsquo;s always known, unless you are connected to
+proxy like <code>TOR</code> or other kind of <code>VPN</code> that could route your request.</p>
+<p>Change request to something else.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://httpbin.org/get&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="s2">&#34;surname&#34;</span><span class="p">:</span> <span class="s2">&#34;Dillinger&#34;</span><span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&#34;Accept&#34;</span><span class="p">:</span> <span class="s2">&#34;application/json&#34;</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">)</span>
+</span></span></code></pre></div><p>You have encoded your first <code>json</code> request! JSON, stands for JavaScript
+Object Notation which is very common format of exchanging data between
+services. Most of the API&rsquo;s made to be available on the web support it.</p>
+<p>So far you&rsquo;ve learned how to get data from API, what about making a
+class that will be an actual object of human cosmic conquer? But first
+let&rsquo;s get some hands dirty with more Neovim commands. We need fuel
+for our rocket science 🚀</p>
+<h2 id="working-with-files">Working with files</h2>
+<p>:edit .</p>
+<p><strong>The end of part 1</strong></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l"><div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this posts</p>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-do-you-need-to-have">What do you need to have?</a></li>
+    <li><a href="#what-you-will-learn">What you will learn?</a></li>
+    <li><a href="#where-to-look-for-answers">Where to look for answers?</a></li>
+    <li><a href="#3-2-1-">3.. 2.. 1.. 🚀</a></li>
+    <li><a href="#what-we-learned-so-far">What we learned so far?</a>
+      <ul>
+        <li><a href="#neovim">Neovim</a></li>
+        <li><a href="#python">Python</a></li>
+        <li><a href="#copilot-">Copilot 👩🏻‍💻</a></li>
+      </ul>
+    </li>
+    <li><a href="#flying-higher">Flying higher</a></li>
+    <li><a href="#what-you-learned-from-this-script">What you learned from this script?</a>
+      <ul>
+        <li><a href="#for-loop">For loop</a></li>
+        <li><a href="#if-elif-and-else-statement">If, elif and else statement</a></li>
+        <li><a href="#and">And</a></li>
+        <li><a href="#or">Or</a></li>
+        <li><a href="#range-function">Range function</a></li>
+        <li><a href="#list">List</a></li>
+        <li><a href="#variable">Variable</a></li>
+      </ul>
+    </li>
+    <li><a href="#get-request">Get request</a></li>
+    <li><a href="#working-with-files">Working with files</a></li>
+  </ul>
+</nav>
+  </div>
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://nutek.marketplaceinspace.com" >
+    &copy;  Phoenix Journey - H@cking 'round the cable. Future is her3 '' Watch it @gain. 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
