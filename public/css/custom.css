@@ -1,0 +1,21 @@
+code {
+    background-color: white;
+}
+
+.pb7 {
+    background-color: rgba(182, 235, 197, 0.5);
+}
+
+.nested-links a {
+    color: rgb(37, 207, 85);
+}
+
+.nested-links a:hover {
+    color: rgb(0, 0, 0);
+}
+
+pre code {
+    background-color: #272822;
+}
+
+/* rgb(125, 121, 121); */

@@ -2,3 +2,38 @@ baseURL = 'https://nutek.marketplaceinspace.com'
 languageCode = 'en-us'
 title = "Phoenix Journey - H@cking 'round the cable. Future is her3 '' Watch it @gain."
 theme = "ananke"
+
+[params]
+author = "Szymon Błaszczyński"
+custom_css = ["css/custom.css", "css/syntax.css"]
+favicon = "img/favicon.ico"
+menu = ['main', 'footer', 'about', 'contact']
+site_logo = "img/logo.png"
+
+[markup]
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = false
+    noHl = false
+    style = 'monokai'
+    tabWidth = 4
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 2
