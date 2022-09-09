@@ -6,14 +6,23 @@
     <description>Recent content on Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Sep 2022 19:37:24 +0200</lastBuildDate><atom:link href="https://nutek.marketplaceinspace.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 09 Sep 2022 14:28:32 +0200</lastBuildDate><atom:link href="https://nutek.marketplaceinspace.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Filling the Tank</title>
+      <link>https://nutek.marketplaceinspace.com/posts/filling-the-tank/</link>
+      <pubDate>Fri, 09 Sep 2022 14:28:32 +0200</pubDate>
+      
+      <guid>https://nutek.marketplaceinspace.com/posts/filling-the-tank/</guid>
+      <description>Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&amp;rsquo;ll build a tool that show where International Space Station is and who is currently in space.</description>
+    </item>
+    
     <item>
       <title>Python &amp; Neovim</title>
       <link>https://nutek.marketplaceinspace.com/posts/python-neovim/</link>
       <pubDate>Fri, 02 Sep 2022 19:37:24 +0200</pubDate>
       
       <guid>https://nutek.marketplaceinspace.com/posts/python-neovim/</guid>
-      <description>Python &amp;amp; Neovim What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
+      <description>Programming language &amp;amp; text editor What do you need to have? Hej, today we begin learning with Nutek to be able to use it how I see it fit. First be sure you have one of the following:
 neosb/nutek-core:0.4.0 from Docker Hub Nutek from crates.io or Github You could follow on with Python3, pip, venv and Neovim What you will learn? I want to show you few Python use cases and how to write code in Neovim.</description>
     </item>
     

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Filling the Tank | Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain.</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space.">
+    <meta name="generator" content="Hugo 0.101.0" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+  
+    <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/syntax.css">
+  
+
+    
+    
+    
+      
+<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+
+
+    
+
+    
+    
+    <meta property="og:title" content="Filling the Tank" />
+<meta property="og:description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://nutek.marketplaceinspace.com/posts/filling-the-tank/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-09T14:28:32+02:00" />
+<meta property="article:modified_time" content="2022-09-09T14:28:32+02:00" />
+
+<meta itemprop="name" content="Filling the Tank">
+<meta itemprop="description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space."><meta itemprop="datePublished" content="2022-09-09T14:28:32+02:00" />
+<meta itemprop="dateModified" content="2022-09-09T14:28:32+02:00" />
+<meta itemprop="wordCount" content="1312">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Filling the Tank"/>
+<meta name="twitter:description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        <img src="/img/logo.png" class="w100 mw5-ns" alt="Phoenix Journey - H@cking &#39;round the cable. Future is her3 &#39;&#39; Watch it @gain." />
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/" title="Home page">
+              Home
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Filling the Tank</h1>
+      
+      <p class="tracked">
+        By <strong>Szymon Błaszczyński</strong>
+      </p>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-09-09T14:28:32+02:00">September 9, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h1 id="fuel--for-our-rocket-">Fuel ⛽️ for our rocket 🚀</h1>
+<h2 id="ground-up">Ground-up</h2>
+<p>In <a href="https://nutek.marketplaceinspace.com/posts/python-neovim/">previous post</a>
+I tried to show you how to write simple program in <em>neovim</em> and
+run using <strong>python3</strong>. Today I want to fill in the gaps in
+your knowledge of my understanding of how developer work. First
+of all we will touch on some Vim commands that migh be useful
+and then we&rsquo;ll build a tool that show where International
+Space Station is and who is currently in space. Maybe we will
+call an Uber for them later, right now they have to use their scooters.</p>
+<p>Let&rsquo;s start with</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">nvim round_globe.py
+</span></span></code></pre></div><h2 id="nvim">Nvim</h2>
+<p>Then please feel free to skip to the <a href="#python-class">next section</a>
+if you already feel comfortable with <code>nvim</code>. I want to elaborate a
+little bit on the subject.</p>
+<p>So you probably want to know how to <em>copy &amp; paste</em>? My solution:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">v</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; use arrow keys or h,j,k,l to highlight and...</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">y</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; place cursor in the place where you want to paste and...</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">P</span><span class="p">&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>Do you want to reorganize your codebase and move lines around?</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nx">V</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; highlight</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">x</span><span class="p">&gt;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; cursor in the place and...</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;</span><span class="err">
+</span></span></span></code></pre></div><p>To undo last step, use <code>&lt;u&gt;</code> and <code>&lt;C-r&gt;</code> to redo.</p>
+<p>You can open more than one file, in separate window or tab. I show
+you the tab option here.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="p">:</span><span class="nx">tabedit</span> <span class="nx">i_swear_i_rockyou</span>.<span class="nx">py</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; switch to previous tab</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">tabprevious</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; then to close a tab and all it&#39;s windows (you know you can </span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">&#34; use &lt;tab&gt; key to autocomplete?)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="p">:</span><span class="nx">tabclose</span><span class="err">
+</span></span></span></code></pre></div><p>I hope it helps.</p>
+<h3 id="helpful-vim-links">Helpful Vim links</h3>
+<p>Once more, I encourage you to explore on theese cheatsheets and
+experiment in your terminal window, tab or webshell.</p>
+<ul>
+<li><a href="https://devhints.io/vim">devhints.io</a></li>
+<li><a href="https://vim.rtorr.com/">rtorr.com</a></li>
+</ul>
+<p><strong>If</strong> you use some flavour of <code>Nutek</code>, you can simply try this out
+in your terminal.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">w3m https://devhints.io/vim
+</span></span><span class="line"><span class="cl"><span class="c1"># or</span>
+</span></span><span class="line"><span class="cl">w3m https://vim.rtorr.com/
+</span></span></code></pre></div><p>I will teach you more about <code>w3m</code> later on, but to quit it - simply
+<code>&lt;q&gt;&lt;y&gt;</code></p>
+<h2 id="enough-is-enough">Enough is enough</h2>
+<p>If you can&rsquo;t stand the pace, or my attitude, or simply want to
+explore&hellip; Here&rsquo;s an email from <a href="https://freecodecamp.org">freecCodeCamp</a> where the subject is <strong>JavaScript</strong>.</p>
+<pre tabindex="0"><code>Quincy Larson &lt;quincy@freecodecamp.org&gt;
+6:11 AM (9 hours ago)
+to me
+
+Here are this week&#39;s five links that are worth your time:
+
+1. Learn React for Beginners. This new freeCodeCamp Front-End JavaScript course will teach you all about React Hooks, State, the Context API, and more. You&#39;ll code along with three experienced software engineers, building projects step-by-step. (8 hour YouTube course): https://www.freecodecamp.org/news/learn-react-from-three-all-star-instructors/
+
+2. And if you&#39;d prefer to learn Angular, I&#39;m thrilled to share this course with you as well: Learn Angular and TypeScript for Beginners. This in-depth course will teach you TypeScript Data Types, Angular Directives, Components, RxJS, and Lifecycle Hooks. (18 hour YouTube course): https://www.freecodecamp.org/news/angular-for-beginners-course/
+
+(...)
+</code></pre><h2 id="python-class">Python class</h2>
+<p>It&rsquo;s not that you&rsquo;re my student. It&rsquo;s just object oriented
+programming concept. Most, if not all, python types are object
+and you can create your own types, classes, too. Create your
+environment and I show you how to call from Houston to space.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># in case you forgot how to prepare your environment, here&#39;s how</span>
+</span></span><span class="line"><span class="cl">python3 -m venv space_station
+</span></span><span class="line"><span class="cl"><span class="nb">source</span> space_station/bin/activate
+</span></span><span class="line"><span class="cl"><span class="c1"># do you see now?</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>space_station<span class="o">)</span>% python -m pip install requests
+</span></span><span class="line"><span class="cl"><span class="c1"># omit the (space_station)% part, as it is only for reference</span>
+</span></span></code></pre></div><h3 id="import">Import</h3>
+<p>It&rsquo;s time for the show to begin. Clear out your <code>round_globe.py</code>
+file (you might need to put it in the same directory as your
+environment). Starting simple, <code>import</code> statements. We will use
+<code>json</code> and <code>requests</code> libraries. Put them in separate lines.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># import statemnts. What we will use.</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">requests</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">json</span>
+</span></span></code></pre></div><h3 id="iss">ISS</h3>
+<p>Now we go big. Whole class. ISS - International Space Station. It is
+initialized without any arguments, then proceeds with a get request
+to an external <em>api</em> resource. <code>API</code>s are services on the Internet that
+perform actions and/or sends data. You can even create your own and
+host for other well behaved users! I check for a <code>HTTP</code> status code
+<code>200</code> - that means everything is <code>OK</code> and I <strong>parse</strong> the response
+json data to <code>self.lat</code> and <code>self.lon</code> class instance variables. If
+there is an error, we print out the status code and exit.</p>
+<p>Then I make two methods <code>get_lat</code> and <code>get_lon</code> which return the stored
+latitude and longitude ISS position variables. You can see here that
+accessing instance variables, as well as functions must be prepended
+with <code>self.</code>, but you are not limited to creating only such objects.
+In <code>__init__</code> we can observe use of local variable <code>response</code> and
+<code>status_code</code> which <em>dies</em> out when out of scope and you can no
+longer access them from other parts of code.</p>
+<p>The last bit of information is <code>__str__(self)</code> method that when used
+to print object, will returned stated action replacing <code>{}</code> with
+subsequent values.</p>
+<p>The last thing I want to say is about indentation, namely tabs, or
+spaces, which must match the hierarchical pattern and be consistent.
+Otherwise you might spend much more time debugging your application
+than you should.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ISS class definition</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">ISS</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Class to represent the International Space Station</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># initialize the class</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the ISS location data</span>
+</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://api.open-notify.org/iss-now.json&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># if the response was successful, parse the JSON data</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">lat</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s1">&#39;iss_position&#39;</span><span class="p">][</span><span class="s1">&#39;latitude&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">lon</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s1">&#39;iss_position&#39;</span><span class="p">][</span><span class="s1">&#39;longitude&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># if the response was not successful, print the status code and exit</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">status_code</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># return self.lat, self.lon</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_lat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lat</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_lon</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">lon</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># pretty print the ISS location</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;ISS location: latitude: </span><span class="si">{}</span><span class="s2">, longitude: </span><span class="si">{}</span><span class="s2">&#34;</span> \
+</span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lat</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lon</span><span class="p">())</span>
+</span></span></code></pre></div><p>To make the <code>round_globe</code> program much more exciting I introduce
+another class that retrieves the Earth position of provided at
+initialization attributes latitude and longitude. The concept
+stays the same.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># PositionRelativeToEarth class definition</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">PositionRelativeToEarth</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># Initialize the class</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># get the position data</span>
+</span></span><span class="line"><span class="cl">        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">                <span class="s2">&#34;https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=</span><span class="si">{}</span><span class="s2">&amp;longitude=</span><span class="si">{}</span><span class="s2">&#34;</span> \
+</span></span><span class="line"><span class="cl">                        <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">latitude</span><span class="p">,</span> <span class="n">longitude</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># if the response was successful, parse the JSON data</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">response_json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">country</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s1">&#39;countryName&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">countryCode</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s1">&#39;countryCode&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">            <span class="bp">self</span><span class="o">.</span><span class="n">city</span> <span class="o">=</span> <span class="n">response_json</span><span class="p">[</span><span class="s1">&#39;locality&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># if the response was not successful, print the status code and exit</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">status_code</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">            <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1"># pretty print position</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;Position: country: </span><span class="si">{}</span><span class="s2">, countryCode: </span><span class="si">{}</span><span class="s2">, city: </span><span class="si">{}</span><span class="s2">&#34;</span> \
+</span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">country</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">countryCode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">city</span><span class="p">)</span>
+</span></span></code></pre></div><p>I want to show you, that you are not limited to sequential program
+structure, and you can store methods outside of classes too. This one
+gets our heroes, astronauts in space and when the method is invoked
+will print out this data to console.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># requests.get(&#34;http://api.open-notify.org/astros.json&#34;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># who is in space?</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">astros</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># make the request</span>
+</span></span><span class="line"><span class="cl">    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&#34;http://api.open-notify.org/astros.json&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">status_code</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># if the response was successful, parse the JSON data</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Get number of people in space.</span>
+</span></span><span class="line"><span class="cl">        <span class="n">number</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;number&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Number of people in space: </span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">people</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&#34;people&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># Print people in space.</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;People in space: &#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">people</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">[</span><span class="s2">&#34;name&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># if the response was not successful, print the status code and exit</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">status_code</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><p>In this part of code I group all the bits provided before to contitute
+a program that will run. I have to call the <code>astros()</code> function,
+initialize <code>ISS</code> class and using another way of representing text data
+<code>f&quot;{1+1}&quot;</code> clause I pretty print the Internationa Space Station
+position relative to our globe, and at last I initilize
+<code>PositionRelativeToEarth</code> with <code>__init__</code> attributes using iss
+variable.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># main function</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">astros</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="n">iss</span> <span class="o">=</span> <span class="n">ISS</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">iss</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">position</span> <span class="o">=</span> <span class="n">PositionRelativeToEarth</span><span class="p">(</span><span class="n">iss</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">iss</span><span class="o">.</span><span class="n">lon</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+</span></span></code></pre></div><p>The last part of code tells the <code>Python</code> interpreter to call <code>main</code>
+function when file is run with <code>python</code> or <code>python3</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># call main function only if this file is executed</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></div><p>That would be it for Today. Lookup where the International Space
+Station is now and who is in the space when you please. You have me
+now finished.</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l"><div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">What&#39;s in this posts</p>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#ground-up">Ground-up</a></li>
+    <li><a href="#nvim">Nvim</a>
+      <ul>
+        <li><a href="#helpful-vim-links">Helpful Vim links</a></li>
+      </ul>
+    </li>
+    <li><a href="#enough-is-enough">Enough is enough</a></li>
+    <li><a href="#python-class">Python class</a>
+      <ul>
+        <li><a href="#import">Import</a></li>
+        <li><a href="#iss">ISS</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://nutek.marketplaceinspace.com" >
+    &copy;  Phoenix Journey - H@cking 'round the cable. Future is her3 '' Watch it @gain. 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

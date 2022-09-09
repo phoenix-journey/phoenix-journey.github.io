@@ -5,7 +5,7 @@ draft: false
 toc: true
 ---
 
-# Python & Neovim
+# Programming language & text editor
 
 ## What do you need to have?
 
