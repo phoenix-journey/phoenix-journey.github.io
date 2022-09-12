@@ -193,6 +193,8 @@ class ISS():
                 .format(self.get_lat(), self.get_lon())
 ```
 
+### Where we at now
+
 To make the `round_globe` program much more exciting I introduce
 another class that retrieves the Earth position of provided at
 initialization attributes latitude and longitude. The concept
@@ -225,6 +227,8 @@ class PositionRelativeToEarth():
                 .format(self.country, self.countryCode, self.city)
 ```
 
+### Astronauts
+
 I want to show you, that you are not limited to sequential program
 structure, and you can store methods outside of classes too. This one
 gets our heroes, astronauts in space and when the method is invoked
@@ -254,6 +258,8 @@ def astros():
         exit(1)
 ```
 
+### Aggregate classes and methods
+
 In this part of code I group all the bits provided before to contitute
 a program that will run. I have to call the `astros()` function,
 initialize `ISS` class and using another way of representing text data
@@ -272,6 +278,8 @@ def main():
     print(position)
 ```
 
+### Run the script
+
 The last part of code tells the `Python` interpreter to call `main`
 function when file is run with `python` or `python3`.
 
@@ -284,3 +292,17 @@ if __name__ == '__main__':
 That would be it for Today. Lookup where the International Space
 Station is now and who is in the space when you please. You have me
 now finished.
+
+## Cleanup
+
+### Deactivate
+
+Deactivate command, will free you from Python's _virtual environment_
+
+```shell
+deactivate
+```
+
+### Source code on Github
+
+All the Python code is available on [Github](https://github.com/phoenix-journey/iss)

@@ -49,7 +49,7 @@
 <meta itemprop="name" content="Filling the Tank">
 <meta itemprop="description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space."><meta itemprop="datePublished" content="2022-09-09T14:28:32+02:00" />
 <meta itemprop="dateModified" content="2022-09-09T14:28:32+02:00" />
-<meta itemprop="wordCount" content="1312">
+<meta itemprop="wordCount" content="1348">
 <meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Filling the Tank"/>
 <meta name="twitter:description" content="Fuel ⛽️ for our rocket 🚀 Ground-up In previous post I tried to show you how to write simple program in neovim and run using python3. Today I want to fill in the gaps in your knowledge of my understanding of how developer work. First of all we will touch on some Vim commands that migh be useful and then we&rsquo;ll build a tool that show where International Space Station is and who is currently in space."/>
@@ -281,7 +281,8 @@ than you should.</p>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;ISS location: latitude: </span><span class="si">{}</span><span class="s2">, longitude: </span><span class="si">{}</span><span class="s2">&#34;</span> \
 </span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_lat</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_lon</span><span class="p">())</span>
-</span></span></code></pre></div><p>To make the <code>round_globe</code> program much more exciting I introduce
+</span></span></code></pre></div><h3 id="where-we-at-now">Where we at now</h3>
+<p>To make the <code>round_globe</code> program much more exciting I introduce
 another class that retrieves the Earth position of provided at
 initialization attributes latitude and longitude. The concept
 stays the same.</p>
@@ -309,7 +310,8 @@ stays the same.</p>
 </span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="s2">&#34;Position: country: </span><span class="si">{}</span><span class="s2">, countryCode: </span><span class="si">{}</span><span class="s2">, city: </span><span class="si">{}</span><span class="s2">&#34;</span> \
 </span></span><span class="line"><span class="cl">                <span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">country</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">countryCode</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">city</span><span class="p">)</span>
-</span></span></code></pre></div><p>I want to show you, that you are not limited to sequential program
+</span></span></code></pre></div><h3 id="astronauts">Astronauts</h3>
+<p>I want to show you, that you are not limited to sequential program
 structure, and you can store methods outside of classes too. This one
 gets our heroes, astronauts in space and when the method is invoked
 will print out this data to console.</p>
@@ -334,7 +336,8 @@ will print out this data to console.</p>
 </span></span><span class="line"><span class="cl">    <span class="k">else</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Error: &#34;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">status_code</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">        <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-</span></span></code></pre></div><p>In this part of code I group all the bits provided before to contitute
+</span></span></code></pre></div><h3 id="aggregate-classes-and-methods">Aggregate classes and methods</h3>
+<p>In this part of code I group all the bits provided before to contitute
 a program that will run. I have to call the <code>astros()</code> function,
 initialize <code>ISS</code> class and using another way of representing text data
 <code>f&quot;{1+1}&quot;</code> clause I pretty print the Internationa Space Station
@@ -348,7 +351,8 @@ variable.</p>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;</span><span class="si">{</span><span class="n">iss</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">position</span> <span class="o">=</span> <span class="n">PositionRelativeToEarth</span><span class="p">(</span><span class="n">iss</span><span class="o">.</span><span class="n">lat</span><span class="p">,</span> <span class="n">iss</span><span class="o">.</span><span class="n">lon</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
-</span></span></code></pre></div><p>The last part of code tells the <code>Python</code> interpreter to call <code>main</code>
+</span></span></code></pre></div><h3 id="run-the-script">Run the script</h3>
+<p>The last part of code tells the <code>Python</code> interpreter to call <code>main</code>
 function when file is run with <code>python</code> or <code>python3</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># call main function only if this file is executed</span>
 </span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -356,6 +360,12 @@ function when file is run with <code>python</code> or <code>python3</code>.</p>
 </span></span></code></pre></div><p>That would be it for Today. Lookup where the International Space
 Station is now and who is in the space when you please. You have me
 now finished.</p>
+<h2 id="cleanup">Cleanup</h2>
+<h3 id="deactivate">Deactivate</h3>
+<p>Deactivate command, will free you from Python&rsquo;s <em>virtual environment</em></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">deactivate
+</span></span></code></pre></div><h3 id="source-code-on-github">Source code on Github</h3>
+<p>All the Python code is available on <a href="https://github.com/phoenix-journey/iss">Github</a></p>
 <ul class="pa0">
   
 </ul>
@@ -380,6 +390,16 @@ now finished.</p>
       <ul>
         <li><a href="#import">Import</a></li>
         <li><a href="#iss">ISS</a></li>
+        <li><a href="#where-we-at-now">Where we at now</a></li>
+        <li><a href="#astronauts">Astronauts</a></li>
+        <li><a href="#aggregate-classes-and-methods">Aggregate classes and methods</a></li>
+        <li><a href="#run-the-script">Run the script</a></li>
+      </ul>
+    </li>
+    <li><a href="#cleanup">Cleanup</a>
+      <ul>
+        <li><a href="#deactivate">Deactivate</a></li>
+        <li><a href="#source-code-on-github">Source code on Github</a></li>
       </ul>
     </li>
   </ul>
