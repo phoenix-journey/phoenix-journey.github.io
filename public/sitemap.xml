@@ -2,23 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nutek.marketplaceinspace.com/posts/filling-the-tank/</loc>
+    <loc>https://nutek.neosb.net/posts/my-first-website/</loc>
+    <lastmod>2022-12-30T17:57:31+00:00</lastmod>
+  </url><url>
+    <loc>https://nutek.neosb.net/</loc>
+    <lastmod>2022-12-30T17:57:31+00:00</lastmod>
+  </url><url>
+    <loc>https://nutek.neosb.net/posts/</loc>
+    <lastmod>2022-12-30T17:57:31+00:00</lastmod>
+  </url><url>
+    <loc>https://nutek.neosb.net/posts/filling-the-tank/</loc>
     <lastmod>2022-09-09T14:28:32+02:00</lastmod>
   </url><url>
-    <loc>https://nutek.marketplaceinspace.com/</loc>
-    <lastmod>2022-09-09T14:28:32+02:00</lastmod>
-  </url><url>
-    <loc>https://nutek.marketplaceinspace.com/posts/</loc>
-    <lastmod>2022-09-09T14:28:32+02:00</lastmod>
-  </url><url>
-    <loc>https://nutek.marketplaceinspace.com/posts/python-neovim/</loc>
+    <loc>https://nutek.neosb.net/posts/python-neovim/</loc>
     <lastmod>2022-09-02T19:37:24+02:00</lastmod>
   </url><url>
-    <loc>https://nutek.marketplaceinspace.com/posts/hi-nutek/</loc>
+    <loc>https://nutek.neosb.net/posts/hi-nutek/</loc>
     <lastmod>2022-08-28T11:01:29+02:00</lastmod>
   </url><url>
-    <loc>https://nutek.marketplaceinspace.com/categories/</loc>
+    <loc>https://nutek.neosb.net/categories/</loc>
   </url><url>
-    <loc>https://nutek.marketplaceinspace.com/tags/</loc>
+    <loc>https://nutek.neosb.net/tags/</loc>
   </url>
 </urlset>
